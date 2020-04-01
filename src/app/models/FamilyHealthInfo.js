@@ -28,7 +28,7 @@ module.exports = {
             updated_at
         ) 
         VALUES 
-        (?,?,?,?,?,?,?,?,?,?,?,?)`;
+        (?,?,?,?,?,?,?,?,?,?)`;
 
     const values = [
       family_health_info.owner_id,
@@ -40,9 +40,7 @@ module.exports = {
       family_health_info.deficiencies,
       family_health_info.has_old_people,
       family_health_info.old_people_count,
-      family_health_info.health_add_info,
-      family_health_info.created_at,
-      family_health_info.updated_at
+      family_health_info.health_add_info
     ];
 
     return db.promise().query(query, values);
@@ -65,9 +63,7 @@ module.exports = {
             deficiencies = ?,
             has_old_people = ?,
             old_people_count = ?,
-            health_add_info = ?,
-            created_at = ?,
-            updated_at = ?
+            health_add_info = ?
             WHERE family_health_info_id = ?`;
 
     const values = [
@@ -81,8 +77,6 @@ module.exports = {
       family_health_info.has_old_people,
       family_health_info.old_people_count,
       family_health_info.health_add_info,
-      family_health_info.created_at,
-      family_health_info.updated_at,
       family_health_info_id
     ];
 

@@ -27,12 +27,10 @@ module.exports = {
             has_another_property,
             has_iptu,
             iptu_holder,
-            property_documentation,
-            created_at,
-            updated_at
+            property_documentation
         ) 
         VALUES 
-        (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
+        (?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
 
     const values = [
       property.owner_id,
@@ -48,9 +46,7 @@ module.exports = {
       property.has_another_property,
       property.has_iptu,
       property.iptu_holder,
-      property.property_documentation,
-      property.created_at,
-      property.updated_at
+      property.property_documentation
     ];
 
     return db.promise().query(query, values);
@@ -77,9 +73,7 @@ module.exports = {
             has_another_property = ?,
             has_iptu = ?,
             iptu_holder = ?,
-            property_documentation = ?,
-            created_at = ?,
-            updated_at = ?
+            property_documentation = ?
             WHERE property_info_id = ?`;
 
     const values = [
@@ -97,8 +91,6 @@ module.exports = {
       property.has_iptu,
       property.iptu_holder,
       property.property_documentation,
-      property.created_at,
-      property.updated_at,
       property_info_id
     ];
 
