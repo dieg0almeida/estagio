@@ -2,7 +2,7 @@ const db = require('../../config/db');
 
 module.exports = {
   all() {
-    return dp.promise().query('SELECT * FROM family_members');
+    return db.promise().query('SELECT * FROM family_members');
   },
   findById(family_members_id) {
     return db.promise().query(`SELECT * FROM family_members WHERE family_members_id = ${family_members_id}`);
@@ -33,7 +33,7 @@ module.exports = {
   findLastInsert() {
     return db.promise().query('SELECT * FROM family_members ORDER BY family_members_id DESC LIMIT 1');
   },
-  update(family_members) {
+  update(family_members, family_members_id) {
     const query = `UPDATE family_members SET
       owner_id = ?,
       name = ?,
@@ -52,12 +52,12 @@ module.exports = {
       family_members.occupacy,
       family_members.earning,
       family_members.relationship,
-      family_members.family_members_id,
+      family_members_id,
     ];
 
     return db.promise().query(query, values);
   },
   destroy(family_members_id) {
-    return db.promise.query(`DELETE FROM family_members WHERE family_members_id = ${family_members_d}`);
+    return db.promise().query(`DELETE FROM family_members WHERE family_members_id = ${family_members_id}`);
   },
 }

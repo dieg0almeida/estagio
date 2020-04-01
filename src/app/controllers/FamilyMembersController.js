@@ -18,8 +18,8 @@ module.exports = {
     return res.redirect(`/family_members/${family_members_id}`);
   },
   async put(req, res) {
-    await FamilyMembers.update(req.body);
-    return res.json({ response: `Family members ${req.body.family_members_id} updated!` });
+    await FamilyMembers.update(req.body, req.params.id);
+    return res.json({ response: `Family members ${req.params.id} updated!` });
   },
   async delete(req, res) {
     await FamilyMembers.destroy(req.params.id);

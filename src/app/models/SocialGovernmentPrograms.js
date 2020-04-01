@@ -25,7 +25,7 @@ module.exports = {
   findLastInsert() {
     return db.promise().query('SELECT * FROM social_government_programs ORDER BY social_government_programs_id DESC LIMIT 1');
   },
-  update(social_government_programs) {
+  update(social_government_programs, social_government_programs_id) {
     const query = `UPDATE social_government_programs SET
       owner_id = ?,
       name = ?,
@@ -36,7 +36,7 @@ module.exports = {
       social_government_programs.owner_id,
       social_government_programs.name,
       social_government_programs.earn,
-      social_government_programs.social_government_programs_id,
+      social_government_programs_id,
     ];
 
     return db.promise().query(query, values);

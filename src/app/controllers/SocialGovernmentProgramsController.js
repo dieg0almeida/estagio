@@ -13,13 +13,13 @@ module.exports = {
   async post(req, res) {
     await SocialGovernmentPrograms.create(req.body);
     const results = await SocialGovernmentPrograms.findLastInsert();
-    const { socialGovernmentProgramsId } = results[0][0];
+    const { social_government_programs_id } = results[0][0];
     
-    return res.redirect(`/socialGovernmentPrograms/${socialGovernmentProgramsId}`);
+    return res.redirect(`/social_government_programs/${social_government_programs_id}`);
   },
   async put(req, res) {
-    await SocialGovernmentPrograms.update(req.body);
-    return res.json({ response: `Social government programs ${req.body.id} updated!` });
+    await SocialGovernmentPrograms.update(req.body, req.params.id);
+    return res.json({ response: `Social government programs ${req.params.id} updated!` });
   },
   async delete(req, res) {
     await SocialGovernmentPrograms.destroy(req.params.id);

@@ -11,6 +11,9 @@ const UserController = require('./app/controllers/UserController');
 const HomeController = require('./app/controllers/HomeController');
 const PropertyInfoController = require('./app/controllers/PropertyInfoController');
 const FamilyHealthInfoController = require('./app/controllers/FamilyHealthInfoController');
+const FamilyMembersController = require('./app/controllers/FamilyMembersController');
+const SocialGovernmentProgramsController = require('./app/controllers/SocialGovernmentProgramsController');
+
 //const authMiddleware = require('./middlewares/auth');
 
 routes.get('/', HomeController.index);
@@ -36,6 +39,17 @@ routes.post('/familyhealth', FamilyHealthInfoController.post);
 routes.put('/familyhealth/:id', FamilyHealthInfoController.put);
 routes.delete('/familyhealth/:id', FamilyHealthInfoController.delete);
 
+routes.get('/family_members', FamilyMembersController.index);
+routes.get('/family_members/:id', FamilyMembersController.show);
+routes.post('/family_members', FamilyMembersController.post);
+routes.put('/family_members/:id', FamilyMembersController.put);
+routes.delete('/family_members/:id', FamilyMembersController.delete);
+
+routes.get('/social_government_programs', SocialGovernmentProgramsController.index);
+routes.get('/social_government_programs/:id', SocialGovernmentProgramsController.show);
+routes.post('/social_government_programs', SocialGovernmentProgramsController.post);
+routes.put('/social_government_programs/:id', SocialGovernmentProgramsController.put);
+routes.delete('/social_government_programs/:id', SocialGovernmentProgramsController.delete);
 //teste
 
 routes.get('/family_info', family_infoController.index);
