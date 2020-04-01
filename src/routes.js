@@ -6,6 +6,11 @@ const FamilyInfoController = require('./app/controllers/FamilyInfoController');
 const OwnerController = require('./app/controllers/OwnerController');
 const UserController = require('./app/controllers/UserController');
 const HomeController = require('./app/controllers/HomeController');
+const PropertyInfoController = require('./app/controllers/PropertyInfoController');
+const FamilyHealthInfoController = require('./app/controllers/FamilyHealthInfoController');
+const FamilyMembersController = require('./app/controllers/FamilyMembersController');
+const SocialGovernmentProgramsController = require('./app/controllers/SocialGovernmentProgramsController');
+
 //const authMiddleware = require('./middlewares/auth');
 
 routes.get('/', HomeController.index);
@@ -30,7 +35,6 @@ routes.get('/add_family_info/:id', AddFamilyInfoController.show);
 routes.post('/add_family_info', AddFamilyInfoController.post);
 routes.put('/add_family_info/:id', AddFamilyInfoController.put);
 routes.delete('/add_family_info/:id', AddFamilyInfoController.delete);
-
 
 
 
