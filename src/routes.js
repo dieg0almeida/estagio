@@ -9,6 +9,8 @@ const add_family_infoController = require('./app/controllers/Add_family_infoCont
 const OwnerController = require('./app/controllers/OwnerController');
 const UserController = require('./app/controllers/UserController');
 const HomeController = require('./app/controllers/HomeController');
+const PropertyInfoController = require('./app/controllers/PropertyInfoController');
+const FamilyHealthInfoController = require('./app/controllers/FamilyHealthInfoController');
 //const authMiddleware = require('./middlewares/auth');
 
 routes.get('/', HomeController.index);
@@ -22,6 +24,18 @@ routes.post('/owners', OwnerController.post);
 routes.put('/owners/:id', OwnerController.put);
 routes.delete('/owners/:id', OwnerController.delete);
 
+routes.get('/property', PropertyInfoController.index);
+routes.get('/property/:id', PropertyInfoController.show);
+routes.post('/property', PropertyInfoController.post);
+routes.put('/property/:id', PropertyInfoController.put);
+routes.delete('/property/:id', PropertyInfoController.delete);
+
+routes.get('/familyhealth', FamilyHealthInfoController.index);
+routes.get('/familyhealth/:id', FamilyHealthInfoController.show);
+routes.post('/familyhealth', FamilyHealthInfoController.post);
+routes.put('/familyhealth/:id', FamilyHealthInfoController.put);
+routes.delete('/familyhealth/:id', FamilyHealthInfoController.delete);
+
 //teste
 
 routes.get('/family_info', family_infoController.index);
@@ -30,6 +44,5 @@ routes.get('/family_info/:id', family_infoController.show);
 routes.get('/add_family_info', add_family_infoController.index);
 routes.get('/add_family_info/:id', add_family_infoController.show);
 //
-
 
 module.exports = routes;
