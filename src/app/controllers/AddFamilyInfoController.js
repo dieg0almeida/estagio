@@ -17,8 +17,8 @@ module.exports = {
 
         const results = await AddFamilyInfo.findLastInsert();
         const { AddFamilyInfo_id } = results[0][0];
-        
-        return res.redirect(`/AddFamilyInfo/${AddFamilyInfo_id}`);
+
+        return res.redirect(`/add_family_info/${AddFamilyInfo_id}`);
     },
     async put(req, res){
         await AddFamilyInfo.update(req.body);
