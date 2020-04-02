@@ -36,6 +36,17 @@ routes.post('/add_family_info', AddFamilyInfoController.post);
 routes.put('/add_family_info/:id', AddFamilyInfoController.put);
 routes.delete('/add_family_info/:id', AddFamilyInfoController.delete);
 
+routes.get('/property', PropertyInfoController.index);
+routes.get('/property/:id', PropertyInfoController.show);
+routes.post('/property', PropertyInfoController.post);
+routes.put('/property/:id', PropertyInfoController.put);
+routes.delete('/property/:id', PropertyInfoController.delete);
+
+routes.get('/familyhealth', FamilyHealthInfoController.index);
+routes.get('/familyhealth/:id', FamilyHealthInfoController.show);
+routes.post('/familyhealth', FamilyHealthInfoController.post);
+routes.put('/familyhealth/:id', FamilyHealthInfoController.put);
+routes.delete('/familyhealth/:id', FamilyHealthInfoController.delete);
 
 
 module.exports = routes;
