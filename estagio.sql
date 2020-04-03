@@ -31,7 +31,7 @@ CREATE TABLE `add_family_info` (
   `has_knowledge_community_members` tinyint(1) DEFAULT NULL,
   `has_associate_community_meeting` tinyint(1) DEFAULT NULL,
   `work_community_priorities` text DEFAULT NULL,
-  `has_socail_government_programs` tinyint(1) DEFAULT NULL,
+  `has_social_government_programs` tinyint(1) DEFAULT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
