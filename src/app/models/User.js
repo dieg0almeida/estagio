@@ -2,6 +2,7 @@ const db = require('../../config/db');
 
 module.exports = {
     signIn(user){
-        return db.promise().query(`SELECT * FROM users WHERE email like '${user.email}'`);
+        const query = `SELECT * FROM users WHERE email like '${user.email}'`;
+        return db.promise().query(query);
     }
 }

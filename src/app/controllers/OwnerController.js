@@ -21,9 +21,9 @@ module.exports = {
         return res.redirect(`/owners/${owner_id}`);
     },
     async put(req, res){
-        await Owner.update(req.body);
+        await Owner.update(req.body, req.params.id);
 
-        return res.json({response: `Owner ${req.body.owner_id} updated!`});
+        return res.json({response: `Owner ${req.params.id} updated!`});
     },
     async delete(req, res){
         await Owner.destroy(req.params.id);

@@ -5,8 +5,7 @@ const authConfig = require('../../config/auth.json');
 module.exports = {
     async singIn(req, res) {
         const results = await User.signIn(req.body);
-
-        if (results.length === 0 || results[0][0].password !== req.body.password) {
+        if (results[0].length === 0 || results[0][0].password !== req.body.password) {
             return res.json({
                 "success": false,
                 "errors": [

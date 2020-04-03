@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-//const authMiddleware = require('../middlewares/auth');
+const authMiddleware = require('../middlewares/auth');
 
 const UserController = require('../app/controllers/UserController');
 const HomeController = require('../app/controllers/HomeController');
@@ -15,7 +15,7 @@ const propertyInfo = require('./propertyInfo');
 const socialGovernmentPrograms = require('./socialGovernmentPrograms');
 
 routes.get('/', HomeController.index);
-routes.post('/sing_in', UserController.singIn);
+routes.post('/sign_in', UserController.singIn);
 
 
 routes.use('/addfamilyinfo', addFamilyInfo);

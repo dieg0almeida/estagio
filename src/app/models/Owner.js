@@ -70,7 +70,7 @@ module.exports = {
     findLastInsert() {
         return db.promise().query('SELECT * FROM owners ORDER BY owner_id DESC LIMIT 1');
     },
-    update(owner) {
+    update(owner, owner_id) {
         const query = `UPDATE owners SET
             name = ?, 
             mother_name = ?, 
@@ -123,7 +123,7 @@ module.exports = {
             owner.city,
             owner.cell_phone_number,
             owner.phone_number,
-            owner.owner_id
+            owner_id
         ];
 
         return db.promise().query(query, values);
