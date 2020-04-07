@@ -60,6 +60,12 @@
   text-decoration: none;
 }
 
+footer p {
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
 html {
   height: 100%;
 }
