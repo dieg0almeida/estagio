@@ -16,6 +16,7 @@ const socialGovernmentPrograms = require('./socialGovernmentPrograms');
 
 routes.get('/', HomeController.index);
 routes.post('/sign_in', UserController.singIn);
+routes.get('/sign_in', UserController.renderSingIn);
 
 
 routes.use('/addfamilyinfo', addFamilyInfo);

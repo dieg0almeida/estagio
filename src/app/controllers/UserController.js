@@ -3,7 +3,13 @@ const jwt = require('jsonwebtoken');
 const authConfig = require('../../config/auth.json');
 
 module.exports = {
+
+    renderSingIn(req, res){
+        return res.render("login_page.njk");
+    },
+
     async singIn(req, res) {
+        
         const results = await User.signIn(req.body);
         if (results[0].length === 0 || results[0][0].password !== req.body.password) {
             return res.json({
@@ -22,4 +28,6 @@ module.exports = {
             res.json({ user_id, email, success: true , token});
         }
     }
+
+   
 }

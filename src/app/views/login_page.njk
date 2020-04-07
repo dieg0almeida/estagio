@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_login_page.css">
+    <title>Página de Login</title>
+</head>
+<body>
+    <main class="login-page">
+      
+        <div class="form">
+          <h2>EFETUAR LOGIN</h2>
+          <form class="login-form" action="/sign_in" method="POST" onsubmit="return checkFields(event)">
+            <input type="email" placeholder="Email" name="email"/>
+            <input type="password" placeholder="Senha" name="password"/>
+            <button>Entrar</button>  
+          </form>
+        </div>
+
+    </main>
+    <footer>
+        
+    </footer>
+
+    <script src="/scripts.js"></script>
+</body>
+
+</html>
