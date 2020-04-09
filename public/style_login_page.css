@@ -77,3 +77,13 @@ body {
   -moz-osx-font-smoothing: grayscale; 
      
 }
+
+img{
+  justify-self: center;
+  padding-bottom: 30px;
+  width: 96px;
+  height: 72px;
+  object-fit: contain;
+}
+
+
