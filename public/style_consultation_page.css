@@ -273,12 +273,9 @@ footer{
     
   background: #212529;
   height: 90px;
-  position: fixed
   width: 100%;
   color: white;
   display: flex;
-    
-  
 }
 
 section#copyright{

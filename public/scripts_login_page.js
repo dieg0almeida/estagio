@@ -18,7 +18,13 @@ function checkFields(event){
     if(isEmpty){
 
         event.preventDefault()
-        alert("Por favor, preencha todos os campos!")
-        
+        var text = document.createTextNode('Por favor, preencha todos os campos!')
+        var emptyFieldsElementeP = document.querySelector('div#emptyFields p')
+        emptyFieldsElementeP.appendChild(text)
+
+        setTimeout(function(){ 
+            emptyFieldsElementeP.removeChild(text)
+        }, 3500);
+          
     }
 }
