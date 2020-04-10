@@ -4,12 +4,22 @@
 	<title>Página de Consulta</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/style_consultation_page.css">
+	<link rel="stylesheet" type="text/css" href="style_consultation_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 <!--===============================================================================================-->
 </head>
 <body>
 	<header>
+        
+            <div class="navbar">
+              <a class="active" href="#" id="logo"><img src="http://placehold.it/2545x1840?text=LOGO" alt="solida_logo"></a>
+              <a id="navicon" href="#"><i class="fa fa-fw fa-home" style="font-size:24px;"></i> Inicio</a>
+              <a id="navicon" href="#"><i class="fa fa-fw fa-envelope" style="font-size:24px;"></i> Sobre</a>
+              <a id="navicon" href="#"><i class="fa fa-fw fa-phone" style="font-size:24px;"></i> Contato</a>
+              <a id="usericon" href="#"><i class="fa fa-fw fa-user-circle-o" style="font-size:36px;"></i></a>
+            </div>
+        <!--
       <img src="http://placehold.it/2545x1840?text=LOGO" alt="solida_logo">
       <nav>
           <a href="">Início</a>
@@ -18,7 +28,7 @@
       </nav>
       <a href="/sign_in">
           <i class="material-icons">account_circle</i>
-      </a>
+      </a> -->
   </header>
 
 	<div class="limiter">
@@ -28,30 +38,36 @@
             
             
 			<div class="wrap-table">
-                <h1 id="title">Faça sua Busca</h1>
+                
                         <form>
-                          <input type="text" name="search" placeholder="Digite o nome ou CPF">
+                          <input type="text" name="search" placeholder="Filtre por Nome ou CPF" ><input type="submit" class="buttonsearch" value="Filtrar">
                         </form>
-					<div class="table">
+					
 
-						<div class="table">
+						<div class="table" >
 
 						<div class="row header">
-							<div class="cell">
+							<div id="tableheaderleft" class="cell">
 								ID
 							</div>
-							<div class="cell">
+							<div id="tableheader" class="cell" >
 								PROPRIETÁRIO
 							</div>
-							<div class="cell">
+							<div id="tableheader" class="cell" >
 								CPF
 							</div>
-							<div class="cell">
+							<div id="tableheader" class="cell" >
 								ENDEREÇO
 							</div>
-							<div class="cell">
+							<div id="tableheader" class="cell">
 								BAIRRO
 							</div>
+                            
+                            <div id="tableheaderright" class="cell">
+								#
+							</div>
+                            
+                            
 						</div>
 
 						<div class="row">
@@ -70,41 +86,8 @@
 							<div class="cell" data-title="BAIRRO">
 								São José
 							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="ID">
-								1
-							</div>
-							<div class="cell" data-title="PROPRIETÁRIO">
-								Augusto
-							</div>
-							<div class="cell" data-title="CPF">
-								000.000.000-00
-							</div>
-							<div class="cell" data-title="ENDEREÇO">
-								Rua Aquidauna
-							</div>
-							<div class="cell" data-title="BAIRRO">
-								São José
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="cell" data-title="ID">
-								1
-							</div>
-							<div class="cell" data-title="PROPRIETÁRIO">
-								Augusto
-							</div>
-							<div class="cell" data-title="CPF">
-								000.000.000-00
-							</div>
-							<div class="cell" data-title="ENDEREÇO">
-								Rua Aquidauna
-							</div>
-							<div class="cell" data-title="BAIRRO">
-								São José
+                            <div class="cell" data-title="BAIRRO">
+								<button class="button">Ver</button>
 							</div>
 						</div>
 
@@ -124,6 +107,9 @@
 							<div class="cell" data-title="BAIRRO">
 								São José
 							</div>
+                            <div class="cell" data-title="BAIRRO">
+								<button class="button">Ver</button>
+							</div>
 						</div>
 
 						<div class="row">
@@ -141,11 +127,56 @@
 							</div>
 							<div class="cell" data-title="BAIRRO">
 								São José
+							</div>
+                            <div class="cell" data-title="BAIRRO">
+								<button class="button">Ver</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="ID">
+								1
+							</div>
+							<div class="cell" data-title="PROPRIETÁRIO">
+								Augusto
+							</div>
+							<div class="cell" data-title="CPF">
+								000.000.000-00
+							</div>
+							<div class="cell" data-title="ENDEREÇO">
+								Rua Aquidauna
+							</div>
+							<div class="cell" data-title="BAIRRO">
+								São José
+							</div>
+                            <div class="cell" data-title="BAIRRO">
+								<button class="button">Ver</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="ID">
+								1
+							</div>
+							<div class="cell" data-title="PROPRIETÁRIO">
+								Augusto
+							</div>
+							<div class="cell" data-title="CPF">
+								000.000.000-00
+							</div>
+							<div class="cell" data-title="ENDEREÇO">
+								Rua Aquidauna
+							</div>
+							<div class="cell" data-title="BAIRRO">
+								São José
+							</div>
+                            <div class="cell" data-title="BAIRRO">
+								<button class="button">Ver</button>
 							</div>
 						</div>
 
                     </div>
-                 </div>
+                 
 			</div>
 		</div>
 	</div>
@@ -155,9 +186,9 @@
         
         <section id="contato">
         
-			<h4>Contato</h4><br>
-			<h5>(74) 9999-9999</h5>
-			<h5>ahsajsh@hotmail.com</h5>
+            <h4>Contato</h4><br>
+        <h5>(74) 9999-9999</h5>
+        <h5>ahsajsh@hotmail.com</h5>
         
         </section>
         

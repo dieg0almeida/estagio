@@ -7,65 +7,136 @@
 }
 
 body, html {
-  background: linear-gradient(to top, #daa520 0%, #0000ff 100%);
+    background: linear-gradient(to top,  #daa520 20%, #0000ff 89%, #0000a4);
+  
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	height: 100%;
+	height: auto;
 	font-family: sans-serif;
 }
 
 /* ------------------------------------ */
 
-header {
-    background-color: darkblue;
-    color: white;
-    max-width: 100%;
-    padding: 8px 0 8px 0;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 240px 1fr 224px;
+
+
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(0,0,0,0.0);;
+  overflow: hidden;
+
+   
+}
+
+
+/* STYLE DA IMAGEM DA LOGO NA NAVBAR */
+.navbar a#logo.active img{
+
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+
+   
+}
+
+/* Espaço da navbar para a logo */
+.navbar a{
+    
+  float: left;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+   
+}
+
+
+/* Icone do Usuario */
+.navbar a#usericon {
+  float: right;
+  text-align: center;
+  padding: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
     
 }
 
-header nav{
-    align-self: center;
-    justify-self: center;
+
+/* Navbar links */
+.navbar a#navicon {
+  float: left;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
     
 }
 
 
 
-header nav a{
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 4px;
-    text-decoration: none;
-    color: white;
-    padding: 0 24px;
-    transition: 400ms;
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: darkblue;
 }
 
-header nav a:hover {
-    border-radius: 6px;
-    background-color: rgba(0, 167, 196, 0.5);
+/* Current/active navbar link */
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar  {
+    float: none;
+    display: block;
+  }
 }
 
-header a{
-    justify-self: center;
-    align-self: center;
-    color: white;
-    transition: 400ms;
+
+
+
+
+
+
+/*BOTÃO DE BUSCA FILTRAR AO LADO DO TEXTO*/
+.buttonsearch {
+  background-color: transparent; /* Green */
+  border-style: solid;
+  
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  padding: 12px 20px;
     
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-header img{
-    justify-self: end;
-    width: 96px;
-    height: 72px;
-    object-fit: contain;
+.buttonsearch:hover {
+  background-color: green;
+ 
+  cursor: pointer;
 }
 
+.button {
+  background-color: purple;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 /*[ Table ]*/
 
@@ -93,17 +164,19 @@ header img{
 .wrap-table {
     
   width: 960px;
-  border-radius: 10px;
+  border-radius: 1px;
   overflow: hidden;
-   
-    
-   
+
 }
 
 .table {
   width: 100%;
   display: table;
   margin: auto;
+   
+      
+      
+    
   
 }
 
@@ -124,6 +197,7 @@ header img{
 .row.header {
   color: #ffffff;
   background: transparent;
+  border-color: white !important;
     
     
   
@@ -179,7 +253,7 @@ header img{
   color: #666666;
   line-height: 1.2;
   font-weight: unset !important;
-
+  
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #f2f2f2;
@@ -191,14 +265,20 @@ header img{
   color: #fff;
   line-height: 1.2;
   font-weight: unset !important;
-
+  border-color: white !important;
   padding-top: 19px;
   padding-bottom: 19px;
+}
+/*tira as linhas das tabelas*/
+div.cell{
+    border-style: none !important ;
 }
 
 .row .cell:nth-child(1) {
   width: 100px;
   padding-left: 40px;
+     
+    
 }
 
 .row .cell:nth-child(2) {
@@ -215,6 +295,11 @@ header img{
 
 .row .cell:nth-child(5) {
   width: 190px;
+}
+.row .cell:nth-child(6) {
+  width: 190px;
+    text-align: center;
+
 }
 
 .table, .row {
@@ -263,9 +348,32 @@ form {
     text-align: center;
 }
 
-body{
-    height: auto;
+
+/* Aqui é a linha branca da parte transparente da tabela*/
+div#tableheader.cell{
+    border-width: 0.5px;  
+    border-top-style: solid !important;
+    
 }
+
+div#tableheaderleft.cell{
+    border-width: 0.5px;  
+    border-top-style: solid !important;
+    border-left-style:solid !important;
+    
+}
+
+div#tableheaderright.cell{
+    border-width: 0.5px;  
+    border-top-style: solid !important;
+    border-right-style:solid !important;
+    
+}
+
+
+
+
+
 
 /*Aqui vem o footer */
 
@@ -273,9 +381,12 @@ footer{
     
   background: #212529;
   height: 90px;
+  position: fixed
   width: 100%;
   color: white;
   display: flex;
+    
+  
 }
 
 section#copyright{
@@ -297,7 +408,9 @@ input[type=text] {
   width: 250px;
   box-sizing: border-box;
   border: 2px solid #ccc;
-  border-radius: 10px;
+ 
+border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   font-size: 16px;
   background-color: white;
   background-image: url('searchicon.png');
@@ -309,6 +422,6 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  width: 100%;
+  width: 80%;
 }
 
