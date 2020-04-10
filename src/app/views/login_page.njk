@@ -8,9 +8,7 @@
 </head>
 <body>
 
-    <div id="emptyFields">
-      <p></p>
-    </div>
+
     
     <main class="login-page">
       
@@ -19,7 +17,11 @@
           <form class="login-form" action="/sign_in" method="POST" onsubmit="return checkFields(event)">
             <input type="email" placeholder="Email" name="email"/>
             <input type="password" placeholder="Senha" name="password"/>
+                <div id="emptyFields">
+                  <p></p>
+                </div>
             <button>Entrar</button>  
+
           </form>
         </div>
 
