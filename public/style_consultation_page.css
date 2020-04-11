@@ -31,6 +31,14 @@ body, html {
    
 }
 
+/* Style the empty fields */
+#emptyFields p {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px #111111;
+  position: absolute;
+}
+
 
 /* STYLE DA IMAGEM DA LOGO NA NAVBAR */
 .navbar a#logo.active img{

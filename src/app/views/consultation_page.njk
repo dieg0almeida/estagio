@@ -38,9 +38,12 @@
             
             
 			<div class="wrap-table">
-                
-                        <form>
-                          <input type="text" name="search" placeholder="Filtre por Nome ou CPF" ><input type="submit" class="buttonsearch" value="Filtrar">
+						<div id="emptyFields">
+              				<p></p>
+						</div>
+	
+                        <form action="/sign_in" method="POST" onsubmit="return checkFields(event)">
+                          <input type="text" name="filter" placeholder="Filtre por Nome ou CPF" ><input type="submit" class="buttonsearch" value="Filtrar" id="buttonFilter">
                         </form>
 					
 
@@ -86,7 +89,7 @@
 							<div class="cell" data-title="BAIRRO">
 								São José
 							</div>
-                            <div class="cell" data-title="BAIRRO">
+                            <div class="cell" data-title="MAIS DETALHES">
 								<button class="button">Ver</button>
 							</div>
 						</div>
@@ -107,7 +110,7 @@
 							<div class="cell" data-title="BAIRRO">
 								São José
 							</div>
-                            <div class="cell" data-title="BAIRRO">
+                            <div class="cell" data-title="MAIS DETALHES">
 								<button class="button">Ver</button>
 							</div>
 						</div>
@@ -128,7 +131,7 @@
 							<div class="cell" data-title="BAIRRO">
 								São José
 							</div>
-                            <div class="cell" data-title="BAIRRO">
+                            <div class="cell" data-title="MAIS DETALHES">
 								<button class="button">Ver</button>
 							</div>
 						</div>
@@ -149,7 +152,7 @@
 							<div class="cell" data-title="BAIRRO">
 								São José
 							</div>
-                            <div class="cell" data-title="BAIRRO">
+                            <div class="cell" data-title="MAIS DETALHES">
 								<button class="button">Ver</button>
 							</div>
 						</div>
@@ -170,7 +173,7 @@
 							<div class="cell" data-title="BAIRRO">
 								São José
 							</div>
-                            <div class="cell" data-title="BAIRRO">
+                            <div class="cell" data-title="MAIS DETALHES">
 								<button class="button">Ver</button>
 							</div>
 						</div>
@@ -187,11 +190,12 @@
         <section id="contato">
         
             <h4>Contato</h4><br>
-        <h5>(74) 9999-9999</h5>
-        <h5>ahsajsh@hotmail.com</h5>
+			<h5>(74) 9999-9999</h5>
+			<h5>ahsajsh@hotmail.com</h5>
         
         </section>
         
 	</footer>
+	<script src="/scripts_consultation_page.js"></script>
 </body>
 </html>

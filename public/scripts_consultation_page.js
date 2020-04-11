@@ -1,8 +1,7 @@
 function checkFields(event){
 
     const valuesToCheck = [
-        "email",
-        "password",
+        "filter",
     ] 
 
     const isEmpty = valuesToCheck.find(function(value){
@@ -19,10 +18,10 @@ function checkFields(event){
 
         event.preventDefault()
         
-        const text = document.createTextNode('Por favor, preencha todos os campos!')
+        const text = document.createTextNode('Por favor, informe o nome ou o CPF!')
         const emptyFieldsElementeP = document.querySelector('div#emptyFields p')
 
-        const button = document.querySelector('form button')
+        const button = document.querySelector('input#buttonFilter')
         
         emptyFieldsElementeP.appendChild(text)
         button.disabled = true
