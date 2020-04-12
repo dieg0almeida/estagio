@@ -25,7 +25,7 @@ module.exports = {
             family_info.origin_city ,
             family_info.state ,
             family_info.city_residence_time,
-            family_info.home_residence_time 
+            family_info.home_residence_time
         ];
 
         return db.promise().query(query, values);
@@ -43,12 +43,12 @@ module.exports = {
             WHERE family_info_id = ?`;
 
         const values = [
-            family_info.family_info_id,
             family_info.owner_id ,
             family_info.origin_city ,
             family_info.state ,
             family_info.city_residence_time,
-            family_info.home_residence_time ,
+            family_info.home_residence_time, 
+            family_info_id
         ];
 
         return db.promise().query(query, values);

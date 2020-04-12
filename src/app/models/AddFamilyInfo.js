@@ -10,7 +10,7 @@ module.exports = {
     create(add_family_info) {
         const query = `INSERT INTO add_family_info 
         (
-            owner_id = ?,
+            owner_id,
             has_knowledge_community_members,
             has_associate_community_meeting,
             work_community_priorities,
@@ -48,8 +48,6 @@ module.exports = {
             add_family_info.has_associate_community_meeting ,
             add_family_info.work_community_priorities,
             add_family_info.has_socail_government_programs,
-            add_family_info.created_at ,
-            add_family_info.updated_at,
         ];
 
         return db.promise().query(query, values);
