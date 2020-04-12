@@ -8,9 +8,9 @@ module.exports = {
     },
     async show(req, res){
         const results = await FamilyInfo.findById(req.params.id);
-        const FamilyInfo = results[0][0];
+        const familyinfo = results[0][0];
         
-        return res.json({ FamilyInfo });
+        return res.json({ familyinfo });
     },
     async post(req, res){
         await FamilyInfo.create(req.body);
@@ -18,7 +18,7 @@ module.exports = {
         const results = await FamilyInfo.findLastInsert();
         const { family_info_id } = results[0][0];
 
-        return res.redirect(`/family_info/${family_info_id}`);
+        return res.redirect(`/familyinfo/${family_info_id}`);
     },
     async put(req, res){
         await FamilyInfo.update(req.body, req.params.id);
