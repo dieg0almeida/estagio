@@ -1,4 +1,5 @@
 const FamilyHealthInfo = require('../models/FamilyHealthInfo');
+const seeder = require('../seeders/familyhealthinfo');
 
 module.exports = {
   async index(req, res) {
@@ -13,7 +14,8 @@ module.exports = {
     return res.json({ familyHealthInfo });
   },
   async post(req, res) {
-    await FamilyHealthInfo.create(req.body);
+    await FamilyHealthInfo.create(seeder.generate());
+    //await FamilyHealthInfo.create(req.body);
 
     const results = await FamilyHealthInfo.findLastInsert();
 

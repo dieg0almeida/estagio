@@ -23,9 +23,7 @@ module.exports = {
             deficiencies,
             has_old_people,
             old_people_count,
-            health_add_info,
-            created_at,
-            updated_at
+            health_add_info
         ) 
         VALUES 
         (?,?,?,?,?,?,?,?,?,?)`;
