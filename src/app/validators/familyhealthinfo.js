@@ -16,6 +16,10 @@ module.exports = {
             return res.json({ erro: "Por favor insira um valor válido em causas de morte." })
         }
 
+        if (req.body.has_old_people == false && req.body.old_people_count == '' || req.body.has_old_people == false && req.body.old_people_count == null) {
+            return res.json({ erro: "Valor Incorreto em Número de pessoas idosas" })
+        }
+
         if (req.body.has_old_people == true && req.body.old_people_count == null) {
             return res.json({ erro: "Por favor insira o numero de pessoas idosas." })
         }
