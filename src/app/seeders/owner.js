@@ -20,7 +20,7 @@ async function createOwners(){
             marital_property_systems: faker.lorem.words(4), 
             ocupacy_situation: faker.lorem.words(4), 
             job: faker.name.jobTitle(), 
-            literate: faker.lorem.words(4), 
+            literate: true, 
             company_job: faker.company.companyName(), 
             clt: true, 
             earning: faker.random.number(999999), 
@@ -31,7 +31,7 @@ async function createOwners(){
             district: faker.address.streetName(), 
             city: faker.address.city, 
             cell_phone_number: faker.phone.phoneNumber(), 
-            phone_number: faker.phone.phoneNumber();
+            phone_number: faker.phone.phoneNumber()
         });
     }
 
