@@ -19,6 +19,7 @@
     "nunjucks": "^3.2.1"
   },
   "devDependencies": {
+    "faker": "^4.1.0",
     "nodemon": "^2.0.2"
   }
 }

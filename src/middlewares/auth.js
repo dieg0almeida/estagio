@@ -6,8 +6,8 @@ module.exports = (req, res, next) => {
 
     if(!authHeader){
         return res.json({
-            "errors": [
-                "You need to sign in or sign up before continuing."
+            "erro": [
+                "Você precisa estar logado para continuar."
             ]
         });
     }
@@ -15,8 +15,8 @@ module.exports = (req, res, next) => {
     jwt.verify(authHeader, authConfig.secret, (err, decoded) => {
         if(err){
             return res.json({
-                "errors": [
-                    "You need to sign in or sign up before continuing."
+                "erro": [
+                    "Você precisa estar logado para continuar."
                 ]
             });
         }
