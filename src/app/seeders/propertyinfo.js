@@ -6,9 +6,9 @@ const option = { min: 1, max: 2000, precision: 1 };
 async function createProperty() {
     let property = [];
 
-    while (property.length < 10) {
+    for (var index = 0; index < property.length; index++) {
         property.push({
-            owner_id: "1",
+            owner_id: index,
             construction: faker.random.word(),
             finish: faker.commerce.productMaterial(),
             drinking_water: faker.company.companyName(),

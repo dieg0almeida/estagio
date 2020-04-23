@@ -23,6 +23,9 @@ module.exports = {
         if (req.body.has_old_people == true && req.body.old_people_count == null) {
             return res.json({ erro: "Por favor insira o numero de pessoas idosas." })
         }
+        if (!req.body.owner_id) {
+            return res.json({ erro: 'É necessário um proprietário do membro da família.' });
+        }
         next();
     }
 }
