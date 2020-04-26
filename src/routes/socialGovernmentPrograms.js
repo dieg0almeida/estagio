@@ -6,8 +6,8 @@ const SocialGovernmentProgramsValidator = require('../app/validators/socialGover
 
 routes.get('/', SocialGovernmentProgramsController.index);
 routes.get('/:id', SocialGovernmentProgramsController.show);
-routes.post('/', SocialGovernmentProgramsController.post);
-routes.put('/:id', SocialGovernmentProgramsValidator.post, SocialGovernmentProgramsController.put);
+routes.post('/', SocialGovernmentProgramsValidator.post, SocialGovernmentProgramsController.post);
+routes.put('/:id', SocialGovernmentProgramsController.put);
 routes.delete('/:id', SocialGovernmentProgramsController.delete);
 
 module.exports = routes;
