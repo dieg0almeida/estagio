@@ -1,0 +1,62 @@
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0,0,0,0.0);;
+    overflow: hidden;
+  
+     
+  }
+
+/* STYLE DA IMAGEM DA LOGO NA NAVBAR */
+.navbar a#logo.active img{
+
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+
+   
+}
+
+/* Espaço da navbar para a logo */
+.navbar a{
+    
+  float: left;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+   
+}
+
+
+/* Icone do Usuario */
+.navbar a#usericon {
+  float: right;
+  text-align: center;
+  padding: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+    
+}
+
+
+/* Navbar links */
+.navbar a#navicon {
+  float: left;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+    
+}
+
+
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: darkblue;
+}

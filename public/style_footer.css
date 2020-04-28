@@ -1,0 +1,24 @@
+footer{
+    
+    background: #212529;
+    height: auto;
+    position: relative;
+    width: 100%;
+    color: white;
+    display: flex;
+}
+  
+section#copyright{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 50%;
+      
+}
+  
+section#contato{
+    padding-top: 10px;
+    text-align: center;
+    padding-left: 80px;
+    width: 50%;
+}

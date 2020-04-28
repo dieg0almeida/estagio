@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style_consultation_page.css">
+	<link rel="stylesheet" type="text/css" href="style_footer.css">
+	<link rel="stylesheet" type="text/css" href="style_navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 <!--===============================================================================================-->
@@ -12,24 +14,9 @@
 <body>
 	<header>
         
-            <div class="navbar">
-              <a class="active" href="#" id="logo"><img src="http://placehold.it/2545x1840?text=LOGO" alt="solida_logo"></a>
-              <a id="navicon" href="#"><i class="fa fa-fw fa-home" style="font-size:24px;"></i> Inicio</a>
-              <a id="navicon" href="#"><i class="fa fa-fw fa-envelope" style="font-size:24px;"></i> Sobre</a>
-              <a id="navicon" href="#"><i class="fa fa-fw fa-phone" style="font-size:24px;"></i> Contato</a>
-              <a id="usericon" href="#"><i class="fa fa-fw fa-user-circle-o" style="font-size:36px;"></i></a>
-            </div>
-        <!--
-      <img src="http://placehold.it/2545x1840?text=LOGO" alt="solida_logo">
-      <nav>
-          <a href="">Início</a>
-          <a href="">Sobre</a>
-          <a href="">Contato</a>
-      </nav>
-      <a href="/sign_in">
-          <i class="material-icons">account_circle</i>
-      </a> -->
-  </header>
+		{% include "navbar.html" %}
+
+  	</header>
 
 	<div class="limiter">
          
@@ -38,164 +25,72 @@
             
             
 			<div class="wrap-table">
-						<div id="emptyFields">
-              				<p></p>
+				<div id="emptyFields">
+					<p></p>
+				</div>
+
+				<form action="/sign_in" method="POST" onsubmit="return checkFields(event)">
+					<input type="text" name="filter" placeholder="Filtre por Nome ou CPF" ><input type="submit" class="buttonsearch" value="Filtrar" id="buttonFilter">
+				</form>
+			
+
+				<div class="table" >
+
+					<div class="row header">
+						<div id="tableheaderleft" class="cell">
+							ID
 						</div>
-	
-                        <form action="/sign_in" method="POST" onsubmit="return checkFields(event)">
-                          <input type="text" name="filter" placeholder="Filtre por Nome ou CPF" ><input type="submit" class="buttonsearch" value="Filtrar" id="buttonFilter">
-                        </form>
-					
-
-						<div class="table" >
-
-						<div class="row header">
-							<div id="tableheaderleft" class="cell">
-								ID
-							</div>
-							<div id="tableheader" class="cell" >
-								PROPRIETÁRIO
-							</div>
-							<div id="tableheader" class="cell" >
-								CPF
-							</div>
-							<div id="tableheader" class="cell" >
-								ENDEREÇO
-							</div>
-							<div id="tableheader" class="cell">
-								BAIRRO
-							</div>
-                            
-                            <div id="tableheaderright" class="cell">
-								#
-							</div>
-                            
-                            
+						<div id="tableheader" class="cell" >
+							PROPRIETÁRIO
 						</div>
-
-						<div class="row">
-							<div class="cell" data-title="ID">
-								1
-							</div>
-							<div class="cell" data-title="PROPRIETÁRIO">
-								Augusto
-							</div>
-							<div class="cell" data-title="CPF">
-								000.000.000-00
-							</div>
-							<div class="cell" data-title="ENDEREÇO">
-								Rua Aquidauna
-							</div>
-							<div class="cell" data-title="BAIRRO">
-								São José
-							</div>
-                            <div class="cell" data-title="MAIS DETALHES">
-								<button class="button">Ver</button>
-							</div>
+						<div id="tableheader" class="cell" >
+							CPF
 						</div>
-
-						<div class="row">
-							<div class="cell" data-title="ID">
-								1
-							</div>
-							<div class="cell" data-title="PROPRIETÁRIO">
-								Augusto
-							</div>
-							<div class="cell" data-title="CPF">
-								000.000.000-00
-							</div>
-							<div class="cell" data-title="ENDEREÇO">
-								Rua Aquidauna
-							</div>
-							<div class="cell" data-title="BAIRRO">
-								São José
-							</div>
-                            <div class="cell" data-title="MAIS DETALHES">
-								<button class="button">Ver</button>
-							</div>
+						<div id="tableheader" class="cell" >
+							ENDEREÇO
 						</div>
-
-						<div class="row">
-							<div class="cell" data-title="ID">
-								1
-							</div>
-							<div class="cell" data-title="PROPRIETÁRIO">
-								Augusto
-							</div>
-							<div class="cell" data-title="CPF">
-								000.000.000-00
-							</div>
-							<div class="cell" data-title="ENDEREÇO">
-								Rua Aquidauna
-							</div>
-							<div class="cell" data-title="BAIRRO">
-								São José
-							</div>
-                            <div class="cell" data-title="MAIS DETALHES">
-								<button class="button">Ver</button>
-							</div>
+						<div id="tableheader" class="cell">
+							BAIRRO
 						</div>
-
-						<div class="row">
-							<div class="cell" data-title="ID">
-								1
-							</div>
-							<div class="cell" data-title="PROPRIETÁRIO">
-								Augusto
-							</div>
-							<div class="cell" data-title="CPF">
-								000.000.000-00
-							</div>
-							<div class="cell" data-title="ENDEREÇO">
-								Rua Aquidauna
-							</div>
-							<div class="cell" data-title="BAIRRO">
-								São José
-							</div>
-                            <div class="cell" data-title="MAIS DETALHES">
-								<button class="button">Ver</button>
-							</div>
+						
+						<div id="tableheaderright" class="cell">
+							#
 						</div>
-
-						<div class="row">
-							<div class="cell" data-title="ID">
-								1
-							</div>
-							<div class="cell" data-title="PROPRIETÁRIO">
-								Augusto
-							</div>
-							<div class="cell" data-title="CPF">
-								000.000.000-00
-							</div>
-							<div class="cell" data-title="ENDEREÇO">
-								Rua Aquidauna
-							</div>
-							<div class="cell" data-title="BAIRRO">
-								São José
-							</div>
-                            <div class="cell" data-title="MAIS DETALHES">
-								<button class="button">Ver</button>
-							</div>
+						
+						
+					</div>
+				
+					{% for i in range(0, 3) %}
+					<div class="row">
+						<div class="cell" data-title="ID">
+							1
 						</div>
+						<div class="cell" data-title="PROPRIETÁRIO">
+							Augusto
+						</div>
+						<div class="cell" data-title="CPF">
+							000.000.000-00
+						</div>
+						<div class="cell" data-title="ENDEREÇO">
+							Rua Aquidauna
+						</div>
+						<div class="cell" data-title="BAIRRO">
+							São José
+						</div>
+						<div class="cell" data-title="MAIS DETALHES">
+							<button class="button">Ver</button>
+						</div>
+					</div>
+					{% endfor %}
 
-                    </div>
+            	</div>
                  
 			</div>
 		</div>
 	</div>
-	<footer>
-  
-		<section id="copyright"><h5>Copyright (C) Honey Tecnologia. Todos os direitos reservados.</h5></section>
-        
-        <section id="contato">
-        
-            <h4>Contato</h4><br>
-			<h5>(74) 9999-9999</h5>
-			<h5>ahsajsh@hotmail.com</h5>
-        
-        </section>
-        
-	</footer>
+
+	{% include "footer.html" %}
+
 	<script src="/scripts_consultation_page.js"></script>
 </body>
 </html>

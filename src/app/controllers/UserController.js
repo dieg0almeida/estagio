@@ -5,7 +5,7 @@ const authConfig = require('../../config/auth.json');
 module.exports = {
 
     renderSingIn(req, res){
-        return res.render("consultation_page.njk");
+        return res.render("login_page.njk");
     },
 
     async singIn(req, res) {

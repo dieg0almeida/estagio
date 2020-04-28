@@ -19,18 +19,6 @@ body, html {
 /* ------------------------------------ */
 
 
-
-
-/* Style the navigation bar */
-.navbar {
-  width: 100%;
-  height: 90px;
-  background-color: rgba(0,0,0,0.0);;
-  overflow: hidden;
-
-   
-}
-
 /* Style the empty fields */
 #emptyFields p {
   text-align: center;
@@ -38,59 +26,6 @@ body, html {
   text-shadow: 1px 1px 1px #111111;
 }
 
-
-/* STYLE DA IMAGEM DA LOGO NA NAVBAR */
-.navbar a#logo.active img{
-
-    width: 100px;
-    height: 60px;
-    object-fit: cover;
-
-   
-}
-
-/* Espaço da navbar para a logo */
-.navbar a{
-    
-  float: left;
-  text-align: center;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-   
-}
-
-
-/* Icone do Usuario */
-.navbar a#usericon {
-  float: right;
-  text-align: center;
-  padding: 25px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-    
-}
-
-
-/* Navbar links */
-.navbar a#navicon {
-  float: left;
-  text-align: center;
-  padding: 30px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-    
-}
-
-
-
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: darkblue;
-}
 
 /* Current/active navbar link */
 
@@ -102,12 +37,6 @@ body, html {
     display: block;
   }
 }
-
-
-
-
-
-
 
 /*BOTÃO DE BUSCA FILTRAR AO LADO DO TEXTO*/
 .buttonsearch {
@@ -179,12 +108,7 @@ body, html {
 .table {
   width: 100%;
   display: table;
-  margin: auto;
-   
-      
-      
-    
-  
+  margin: auto;  
 }
 
 @media screen and (max-width: 768px) {
@@ -197,8 +121,6 @@ body, html {
 .row {
   display: table-row;
   background: #fff;
-    
-  
 }
 
 .row.header {
@@ -206,13 +128,12 @@ body, html {
   background: transparent;
   border-color: white !important;
     
-    
-  
 }
 
 @media screen and (max-width: 768px) {
   .row {
     display: block;
+    
   }
 
   .row.header {
@@ -384,32 +305,7 @@ div#tableheaderright.cell{
 
 /*Aqui vem o footer */
 
-footer{
-    
-  background: #212529;
-  height: 90px;
-  
-  width: 100%;
-  color: white;
-  display: flex;
-    
-  
-}
 
-section#copyright{
-    text-align: left;
-    padding-left: 20px;
-    padding-top: 20px;
-    width: 50%;
-    
-}
-
-section#contato{
-    padding-top: 10px;
-    text-align: center;
-    padding-left: 80px;
-    width: 50%;
-}
 
 input[type=text] {
   width: 250px;
